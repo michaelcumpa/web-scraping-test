@@ -1,0 +1,60 @@
+<div id="id_card_{{object.slug}}" class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ object.name }} <span>{{ object.symbol }}</span></h5>
+        <div class="row">
+            <div class="col-8">
+                <canvas id="id_rates_timeline{{ object.slug }}" style="width:100%;max-width:700px"></canvas>
+            </div>
+            <div class="col-4">
+                <h6>{{ object.symbol }} Price Statistics</h6>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Price</th>
+                            <td>{{ current_rate.rate_price }}</td>
+                        </tr>
+                        <tr>
+                            <th>Price Change</th>
+                            <td>
+                                {{ current_rate.price_changed }}
+                                <span>{{ current_rate.price_changed_percentaje }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>24h Low / 24h High</th>
+                            <td>{{ current_rate.price_low_high }}</td>
+                        </tr>
+                        <tr>
+                            <th>Trading Volume</th>
+                            <td>{{ current_rate.trading_volume }}</td>
+                        </tr>
+                        <tr>
+                            <th>Volume / Market Cap</th>
+                            <td>{{ current_rate.volume_market_cap }}</td>
+                        </tr>
+                        <tr>
+                            <th>Market Dominance</th>
+                            <td>{{ current_rate.market_dominance }}</td>
+                        </tr>
+                        <tr>
+                            <th>Market Rank</th>
+                            <td>{{ current_rate.market_rank }}</td>
+                        </tr>
+                        <tr>
+                            <th>Circulating Supply</th>
+                            <td>{{ current_rate.circulating_supply }}</td>
+                        </tr>
+                        <tr>
+                            <th>Total Supply</th>
+                            <td>{{ current_rate.total_supply }}</td>
+                        </tr>
+                        <tr>
+                            <th>Max Supply</th>
+                            <td>{{ current_rate.max_supply }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

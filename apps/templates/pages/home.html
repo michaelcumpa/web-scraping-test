@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <label class="form-label">Cryptocurrencies</label>
+                </div>
+                <div class="col-4">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                        Seleccionar
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        {% for currency in object_list %}
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="form-check">
+                                    <input name="crytocurrencies" class="form-check-input" type="checkbox" value="{{ currency.slug }}" id="id_currency_{{ currency.pk }}"/>
+                                    <label class="form-check-label" for="id_currency_{{ currency.pk }}">{{ currency.name }}</label>
+                                </div>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div id="id_rates" class="col-12">
+        </div>
+    </div>
+{% endblock content %}

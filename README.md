@@ -1,4 +1,29 @@
-# Web Scraping Test
+# Coin Market Crawler
 
-* Scraping a cryptocurrencies network to extract some requested data, then, saving the data in json files
-* The program can extract the data and print every record of scraped data done before (from the mentioned page). 
+Behold My Awesome Project!
+
+License: MIT
+
+## Settings
+
+Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
+
+## Basic Commands
+
+### Setting Up Your Users
+
+-   To create a **superuser account**, use this command:
+
+        $ python manage.py createsuperuser
+
+
+### Running tests
+
+    $ docker-compose run django python manage.py test
+
+
+### Run the project with Docker
+
+Run the folling command to up the project
+
+    $ ./run.sh
